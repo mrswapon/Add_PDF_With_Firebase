@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor_ns/flutter_statusbarcolor_ns.dart';
+import 'package:ss_new_collection/views/screens/home_screen.dart';
 import 'views/screens/add_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AddScreen(),
+      home: HomeScreen(),
     );
   }
 }

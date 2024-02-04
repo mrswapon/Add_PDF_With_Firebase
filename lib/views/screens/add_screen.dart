@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../widget/custom_button.dart';
 import '../widget/custom_text_field.dart';
 
@@ -18,6 +17,7 @@ class AddScreen extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.w600, fontSize: 20, color: Colors.white),
           ),
+          iconTheme: const IconThemeData(color: Colors.white),
           centerTitle: true,
         ),
         body: Padding(
@@ -67,7 +67,7 @@ class AddScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 12),
-     //===================================================> Description Section <=========================
+              //===================================================> Description Section <=========================
               Container(
                 width: 355,
                 height: 131,
