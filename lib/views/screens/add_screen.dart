@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_text_field.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ss_new_collection/views/widget/custom_button.dart';
+import 'package:ss_new_collection/views/widget/custom_text_field.dart';
 
 class AddScreen extends StatelessWidget {
   const AddScreen({super.key});
@@ -12,65 +13,67 @@ class AddScreen extends StatelessWidget {
         extendBody: true,
         appBar: AppBar(
           backgroundColor: const Color(0xFF1a7949),
-          title: const Text(
+          title: Text(
             'Add Pdf',
             style: TextStyle(
-                fontWeight: FontWeight.w600, fontSize: 20, color: Colors.white),
+                fontWeight: FontWeight.w600,
+                fontSize: 20.sp,
+                color: Colors.white),
           ),
           iconTheme: const IconThemeData(color: Colors.white),
           centerTitle: true,
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 25),
+              SizedBox(height: 25.h),
               const Text(
                 'Full Name*',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               const CustomTextField(
                 title: 'Enter your name',
               ),
-              const SizedBox(height: 15),
-              const Text(
+              SizedBox(height: 15.h),
+              Text(
                 'Email*',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               const CustomTextField(
                 title: 'Enter your email',
               ),
-              const SizedBox(height: 15),
-              const Text(
+              SizedBox(height: 15.h),
+              Text(
                 'Address*',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               const CustomTextField(
                 title: 'Enter your address',
               ),
-              const SizedBox(height: 15),
-              const Text(
+              SizedBox(height: 15.h),
+              Text(
                 'Category*',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               const CustomTextField(
                 title: 'Select category',
               ),
-              const SizedBox(height: 15),
-              const Text(
+              SizedBox(height: 15.h),
+              Text(
                 'Description*',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w400),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               //===================================================> Description Section <=========================
               Container(
-                width: 355,
-                height: 131,
+                width: 355.w,
+                height: 109.h,
                 color: const Color(0xFFe8f6ef),
                 child: TextFormField(
                   decoration: InputDecoration(
@@ -79,27 +82,28 @@ class AddScreen extends StatelessWidget {
                     hintText: 'Description',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: const BorderSide(
-                        width: 2,
+                      borderSide: BorderSide(
+                        width: 2.w,
                         color: Colors.white,
                       ),
                     ),
-                    focusedBorder: const OutlineInputBorder(
-                      borderSide:
-                          BorderSide(width: 1, color: Color(0xFFe8f6ef)),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1.w, color: const Color(0xFFe8f6ef)),
                     ),
-                    enabledBorder: const UnderlineInputBorder(
-                      borderSide:
-                          BorderSide(width: 1, color: Color(0xFFe8f6ef)),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                          width: 1.w, color: const Color(0xFFe8f6ef)),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               CustomButton(
                 title: 'Save',
                 onpress: () {},
-              )
+              ),
+              SizedBox(height: 16.h),
             ],
           ),
         ));

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final String title;
@@ -16,20 +17,20 @@ class CustomTextField extends StatelessWidget {
       validator: validator,
       decoration: InputDecoration(
         filled: true,
-        fillColor: Color(0xFFe8f6ef),
+        fillColor: const Color(0xFFe8f6ef),
         hintText: title,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(
-            width: 2,
+          borderSide: BorderSide(
+            width: 2.w,
             color: Colors.white,
           ),
         ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(width: 2, color: Colors.white),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 2.w, color: Colors.white),
         ),
-        enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(width: 2, color: Colors.white),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(width: 2.w, color: Colors.white),
         ),
       ),
     );
